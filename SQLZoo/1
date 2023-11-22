@@ -1,4 +1,4 @@
---1. Find the country that start with Y
+--1. Find the country that starts with Y
 
 SELECT name FROM world
   WHERE name LIKE 'Y%';
@@ -28,7 +28,7 @@ SELECT name FROM world
 SELECT name FROM world
   WHERE name LIKE '%oo%';
 
---7. Find the countries that have three or more a in the name
+--7. Find the countries that have three or more in the name
 
 SELECT name FROM world
   WHERE name LIKE '%a%a%a%';
@@ -65,10 +65,10 @@ SELECT name
 
 SELECT capital,name FROM world WHERE capital LIKE concat('%', name, '%');
 
---14. Find the capital and the name where the capital is an extension of name of the country.
+--14. Find the capital and the name where the capital is an extension of the name of the country.
 
 SELECT name, capital FROM world WHERE capital LIKE concat('%', name, '%') AND capital > name;
 
---15. Show the name and the extension where the capital is an extension of name of the country.
+--15. Show the name and the extension where the capital is an extension of the name of the country.
 
 SELECT name, REPLACE(capital, name, '') FROM world WHERE capital LIKE concat('%', name, '%') AND capital > name;
